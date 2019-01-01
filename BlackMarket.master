@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BlackMarket.master.cs" Inherits="BMCP_BlackMarket" %>
+
+
+<%@ Register Src="~/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/NavBar.ascx" TagPrefix="uc1" TagName="NavBar" %>
+<%@ Register Src="~/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+
+
+
+
+<!DOCTYPE html >
+
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+     <style>
+         .parallax {
+    min-height: 500px;
+    background: url("pexels-photo-40120.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+}
+          .parallax-2 {
+    min-height: 500px;
+    background: url("pexels-photo-187107.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+}
+.row {
+	/* display: -ms-flexbox; */
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: auto;
+	margin-left: -15px;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: rgba(0,0,0,.7);
+	background: #e0e3e0;
+	border-radius: 60px;
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+	color: rgba(255,255,255,.75);
+	background: #7e5850;
+	border-radius: 60px;
+}
+      .table-hover>tbody>tr:hover {
+	background-color: rgba(0,0,0,.075);
+}
+     </style>
+</head>
+<body class="parallax" >
+    <form id="form1" runat="server">
+        <uc1:Header runat="server" ID="Header" />
+         <!-- Navigation -->
+        <uc1:NavBar runat="server" ID="NavBar" />
+         <!-- /Navigation -->
+      <!-- .container -->
+   
+        <section class="container">
+       
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </section>
+      <!-- .container -->
+       
+          <!-- Footer -->
+        <uc1:Footer runat="server" ID="Footer" />
+          <!-- /Footer -->
+
+
+     
+    </form>
+         <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS and Holder-->
+    <script src="../assets/js/jquery.min.js"></script>
+         <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/holder.js"></script>
+
+    <script>
+    $('#toggleNavColor').click(function() {
+      $('nav').toggleClass('navbar-dark navbar-light');
+      $('nav').toggleClass('bg-dark bg-light');
+        $('body').toggleClass('parallax parallax-2');
+      $('footer').toggleClass('bg-info bg-light');
+    
+    });
+
+    </script>
+</body>
+</html>
