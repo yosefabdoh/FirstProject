@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CpanalMaster.master.cs" Inherits="BMCP_CpanalMaster" %>
+
+<%@ Register Src="~/BMCP/cPNavbar.ascx" TagPrefix="uc1" TagName="cPNavbar" %>
+<%@ Register Src="~/BMCP/hdcP.ascx" TagPrefix="uc1" TagName="hdcP" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/datatables/dataTables.bootstrap4.css" rel="stylesheet" />
+     <!-- Custom styles for this template-->
+    <link href="../assets/css/sb-admin.css" rel="stylesheet" />
+    <style>
+        .table-hover tbody tr:hover {
+	background-color: rgba(27, 213, 193, 0.21);
+}
+        .table {
+	
+	background-color: #8cdbff1a;
+	border: 5px solid #2186de80;
+}
+
+.table td, .table th {
+	padding: .75rem;
+	vertical-align: top;
+	border-top: 4px solid #cef0f8;
+}
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="bg-light" id="page-top" dir="ltr">
+    <form id="form1" runat="server">
+        <uc1:hdcP runat="server" ID="hdcP" />
+
+        <uc1:cPNavbar runat="server" ID="cPNavbar" />
+        <section class="container-fluid ">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+        <footer class="py-5 bg-light">
+            <div class="container">
+                <p class="m-0 text-center text-dark">Copyright &copy; YosefAbdoh</p>
+            </div>
+        </footer>
+
+    </form>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/holder.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
+    <script src="../assets/datatables/jquery.dataTables.js"></script>
+    <script src="../assets/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../assets/js/sb-admin.min.js"></script>
+     <!-- Custom scripts for this page-->
+    <script src="../assets/js/sb-admin-datatables.min.js"></script>
+<script>
+    $('#toggleNavColor').click(function() {
+      $('nav').toggleClass('navbar-dark navbar-light');
+      $('nav').toggleClass('bg-dark bg-light');
+      $('nav').toggleClass('bg-info bg-light');
+     // $('body').toggleClass('bg-dark bg-light');
+    
+    });
+
+    </script>
+    
+</body>
+</html>
+
+   
